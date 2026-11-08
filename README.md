@@ -49,8 +49,8 @@ npm run preview
    git push -u origin main
    ```
 
-3. В настройках репозитория откройте **Settings → Pages** и выберите **Source: GitHub Actions**.
-4. Откройте вкладку **Actions** и дождитесь завершения workflow `Deploy to GitHub Pages`.
+3. В настройках репозитория откройте **Settings → Pages**. В блоке **Build and deployment** выберите **Source: GitHub Actions** (не **Deploy from a branch**) и сохраните настройку. Публикация из ветки отдаёт исходный `index.html`, который не запускается без сборки.
+4. Откройте вкладку **Actions**, выберите workflow `Deploy to GitHub Pages` и запустите **Run workflow** для ветки `main` (или отправьте новый commit в `main`). Дождитесь зелёного статуса для build и deploy.
 5. Ссылка появится в **Settings → Pages**. Для обычного репозитория она имеет вид `https://ВАШ_АККАУНТ.github.io/ИМЯ_РЕПОЗИТОРИЯ/`.
 
 Если Git не настроен, установите его и выполните вход в GitHub. Не добавляйте `node_modules` или секреты в репозиторий; `node_modules` уже указан в `.gitignore`.
