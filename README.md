@@ -32,3 +32,25 @@ npm run preview
 4. Нажмите **Deploy**. Правило в `vercel.json` поддерживает переходы внутри одностраничного приложения.
 
 Также можно установить Vercel CLI и выполнить `vercel` из папки проекта.
+
+## Публикация на GitHub Pages
+
+В репозитории уже настроена автоматическая публикация через GitHub Actions. После каждого push в ветку `main` сайт собирается и обновляется автоматически.
+
+1. Создайте пустой репозиторий на GitHub.
+2. В корне проекта выполните команды, заменив `ВАШ_АККАУНТ` и `ИМЯ_РЕПОЗИТОРИЯ` на свои:
+
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial valentine site"
+   git branch -M main
+   git remote add origin https://github.com/ВАШ_АККАУНТ/ИМЯ_РЕПОЗИТОРИЯ.git
+   git push -u origin main
+   ```
+
+3. В настройках репозитория откройте **Settings → Pages** и выберите **Source: GitHub Actions**.
+4. Откройте вкладку **Actions** и дождитесь завершения workflow `Deploy to GitHub Pages`.
+5. Ссылка появится в **Settings → Pages**. Для обычного репозитория она имеет вид `https://ВАШ_АККАУНТ.github.io/ИМЯ_РЕПОЗИТОРИЯ/`.
+
+Если Git не настроен, установите его и выполните вход в GitHub. Не добавляйте `node_modules` или секреты в репозиторий; `node_modules` уже указан в `.gitignore`.

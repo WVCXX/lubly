@@ -36,7 +36,7 @@ export default function Gallery({ photos, onNext }) {
             {!imageFailed ? (
               <img
                 className="gallery-photo"
-                src={photo.src}
+                src={`${import.meta.env.BASE_URL}${photo.src.replace(/^\/+/, "")}`}
                 alt={photo.caption}
                 onError={() => setImageFailed(true)}
               />
