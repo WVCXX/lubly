@@ -1,4 +1,14 @@
-const screens = ["intro", "gallery", "gratitude", "likes", "proposal"];
+const screens = [
+  "intro",
+  "gallery",
+  "gratitude",
+  "appreciation",
+  "likes",
+  "dateIdeas",
+  "together",
+  "promise",
+  "proposal",
+];
 
 export default function ProgressDots({ currentScreen }) {
   const activeIndex = screens.indexOf(currentScreen);

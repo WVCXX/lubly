@@ -48,7 +48,7 @@ export default function LikesGame({ options, onNext }) {
         onClick={onNext}
         disabled={!selectedOption}
       >
-        Дальше <span aria-hidden="true">→</span>
+        А теперь помечтаем <span aria-hidden="true">→</span>
       </button>
     </section>
   );

@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Appreciation from "./components/Appreciation.jsx";
+import DateIdeas from "./components/DateIdeas.jsx";
 import Envelope from "./components/Envelope.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Gratitude from "./components/Gratitude.jsx";
@@ -9,8 +11,24 @@ import Intro from "./components/Intro.jsx";
 import LikesGame from "./components/LikesGame.jsx";
 import ProgressDots from "./components/ProgressDots.jsx";
 import Proposal from "./components/Proposal.jsx";
+import Promise from "./components/Promise.jsx";
+import TogetherMoments from "./components/TogetherMoments.jsx";
 import YesScreen from "./components/YesScreen.jsx";
-import { gratitudeText, herName, likesOptions, photos } from "./data.js";
+import {
+  appreciationIntro,
+  appreciationNotes,
+  dateIdeas,
+  dateIdeasIntro,
+  gratitudeText,
+  herName,
+  likesOptions,
+  photos,
+  promiseIntro,
+  promises,
+  togetherIntro,
+  togetherMoments,
+  togetherTitle,
+} from "./data.js";
 
 const screenVariants = {
   initial: { opacity: 0, scale: 1.05, filter: "blur(6px)" },
@@ -28,7 +46,17 @@ const screenVariants = {
   },
 };
 
-const screenOrder = ["intro", "gallery", "gratitude", "likes", "proposal"];
+const screenOrder = [
+  "intro",
+  "gallery",
+  "gratitude",
+  "appreciation",
+  "likes",
+  "dateIdeas",
+  "together",
+  "promise",
+  "proposal",
+];
 
 export default function App() {
   const [screen, setScreen] = useState("intro");
@@ -114,8 +142,41 @@ export default function App() {
         return <Gallery photos={photos} onNext={advance} />;
       case "gratitude":
         return <Gratitude gratitudeText={gratitudeText} onNext={advance} />;
+      case "appreciation":
+        return (
+          <Appreciation
+            intro={appreciationIntro}
+            notes={appreciationNotes}
+            onNext={advance}
+          />
+        );
       case "likes":
         return <LikesGame options={likesOptions} onNext={advance} />;
+      case "dateIdeas":
+        return (
+          <DateIdeas
+            intro={dateIdeasIntro}
+            ideas={dateIdeas}
+            onNext={advance}
+          />
+        );
+      case "together":
+        return (
+          <TogetherMoments
+            title={togetherTitle}
+            intro={togetherIntro}
+            moments={togetherMoments}
+            onNext={advance}
+          />
+        );
+      case "promise":
+        return (
+          <Promise
+            intro={promiseIntro}
+            promises={promises}
+            onNext={advance}
+          />
+        );
       case "proposal":
         return <Proposal onYes={() => navigateTo("envelope")} />;
       case "envelope":

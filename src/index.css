@@ -273,6 +273,249 @@ button:focus-visible {
   text-wrap: pretty;
 }
 
+.appreciation-content {
+  max-width: 680px;
+}
+
+.appreciation-title {
+  margin-bottom: 12px;
+}
+
+.appreciation-intro {
+  max-width: 510px;
+  margin: 0 0 22px;
+  color: #e9cbd8;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.appreciation-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.appreciation-card {
+  min-height: 144px;
+  border: 1px solid rgba(255, 158, 196, 0.2);
+  border-radius: 20px;
+  padding: 17px 18px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 77, 136, 0.1), transparent 60%),
+    rgba(255, 255, 255, 0.045);
+  text-align: left;
+}
+
+.appreciation-icon {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 1.2rem;
+}
+
+.appreciation-card h3 {
+  margin: 0 0 5px;
+  color: #ffe2ed;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.appreciation-card p {
+  margin: 0;
+  color: #dcbfcd;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.date-ideas-content {
+  max-width: 680px;
+}
+
+.date-ideas-title {
+  margin-bottom: 12px;
+}
+
+.date-ideas-intro {
+  max-width: 540px;
+  margin: 0 0 19px;
+  color: #e9cbd8;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.date-ideas-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.date-idea-card {
+  display: flex;
+  min-height: 126px;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgba(255, 158, 196, 0.22);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #ffe2ed;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.date-idea-card:hover,
+.date-idea-card.is-selected {
+  border-color: rgba(255, 158, 196, 0.78);
+  background: rgba(255, 77, 136, 0.15);
+}
+
+.date-idea-card:focus-visible {
+  outline: 2px solid #ffd6e8;
+  outline-offset: 3px;
+}
+
+.date-idea-icon {
+  margin-bottom: 5px;
+  font-size: 1.12rem;
+}
+
+.date-idea-title {
+  margin-bottom: 4px;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.date-idea-text {
+  color: #dcbfcd;
+  font-size: 0.79rem;
+  line-height: 1.48;
+}
+
+.date-idea-reply {
+  display: grid;
+  width: 100%;
+  min-height: 58px;
+  padding: 6px 0;
+  color: #ffd6e8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  place-items: center;
+  text-align: center;
+}
+
+.date-idea-reply p {
+  margin: 6px 0;
+}
+
+.together-content,
+.promise-content {
+  max-width: 650px;
+}
+
+.together-title,
+.promise-title {
+  margin-bottom: 12px;
+}
+
+.together-intro {
+  max-width: 520px;
+  margin: 0 0 21px;
+  color: #e9cbd8;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.together-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 22px;
+}
+
+.together-card {
+  display: flex;
+  min-height: 108px;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid rgba(255, 158, 196, 0.2);
+  border-radius: 18px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.045);
+  text-align: left;
+}
+
+.together-icon {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+}
+
+.together-card h3 {
+  margin: 0 0 5px;
+  color: #ffe2ed;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.together-card p {
+  margin: 0;
+  color: #dcbfcd;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.promise-heart {
+  margin-bottom: 8px;
+  font-size: 2.7rem;
+  filter: drop-shadow(0 0 20px rgba(255, 77, 136, 0.28));
+}
+
+.promise-intro {
+  max-width: 570px;
+  margin: 0 0 20px;
+  color: #ffe2ed;
+  font-size: clamp(1.25rem, 3.8vw, 1.8rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.promise-list {
+  display: flex;
+  width: min(100%, 550px);
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.promise-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin: 0;
+  border: 1px solid rgba(255, 158, 196, 0.18);
+  border-radius: 15px;
+  padding: 13px 15px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f0d7e2;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.promise-item span {
+  flex: 0 0 auto;
+  color: #ff8bb5;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
 .screen-title {
   max-width: 610px;
   margin: 0 0 25px;
@@ -665,6 +908,110 @@ button:focus-visible {
   .options-grid {
     grid-template-columns: 1fr;
     gap: 9px;
+  }
+
+  .appreciation-content {
+    max-width: 420px;
+  }
+
+  .appreciation-intro {
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+  }
+
+  .appreciation-grid {
+    gap: 9px;
+    margin-bottom: 16px;
+  }
+
+  .appreciation-card {
+    min-height: 128px;
+    padding: 14px 13px;
+  }
+
+  .appreciation-card h3 {
+    font-size: 1rem;
+  }
+
+  .appreciation-card p {
+    font-size: 0.78rem;
+  }
+
+  .date-ideas-content {
+    max-width: 420px;
+  }
+
+  .date-ideas-intro {
+    margin-bottom: 14px;
+    font-size: 0.86rem;
+  }
+
+  .date-ideas-grid {
+    gap: 8px;
+  }
+
+  .date-idea-card {
+    min-height: 120px;
+    padding: 12px 11px;
+  }
+
+  .date-idea-title {
+    font-size: 0.92rem;
+  }
+
+  .date-idea-text {
+    font-size: 0.75rem;
+  }
+
+  .date-idea-reply {
+    min-height: 52px;
+    font-size: 0.82rem;
+  }
+
+  .together-content,
+  .promise-content {
+    max-width: 420px;
+  }
+
+  .together-intro {
+    margin-bottom: 15px;
+    font-size: 0.86rem;
+  }
+
+  .together-grid {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .together-card {
+    min-height: 118px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+  }
+
+  .together-card h3 {
+    font-size: 0.96rem;
+  }
+
+  .together-card p {
+    font-size: 0.74rem;
+  }
+
+  .promise-intro {
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+  }
+
+  .promise-list {
+    gap: 8px;
+    margin-bottom: 19px;
+  }
+
+  .promise-item {
+    gap: 9px;
+    padding: 11px 12px;
+    font-size: 0.82rem;
   }
 
   .option-button {
